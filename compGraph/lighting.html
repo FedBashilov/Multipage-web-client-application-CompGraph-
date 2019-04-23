@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/inputs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Graphic</title>
+  </head>
+  <body>
+
+    <header>
+      <div id="top_header">
+        <span id="burger">&#9776;</span>
+        <p id="headline">Компьютерная графика</p>
+      </div>
+      <div id="bottom_header">
+          <div id="menu" class="close">
+            <a href="index.html"><img src="img/home.png" height="20px" hspace="2px" alt="Главная страница"></a>
+            <a href="projections.html">Проекции</a>
+            <a href="spline.html">Сплайн</a>
+            <a href="surface.html">Поверхность</a>
+            <a href="clipping.html">Отсечение</a>
+            <a class="active" href="lighting.html">Освещение</a>
+          </div>
+      </div>
+    </header>
+
+    <main>
+      <span id="topic_name">Освещение параллепипеда</span>
+      <span id="help" class="text3D">?</span>
+      <div id="topic_help" class="close">На странице представлена реализация 
+          <b>освещения трехмерной фигуры</b>, а именно <b>параллепипеда</b>.<br>
+          Интенсивность освещения каждой грани определяется с помощью скалярного
+          произведения вектора нормали грани и вектора перпендикулярного холсту.<br>
+          Чтобы задать размеры параллепипеда, используйте <i>ползунки</i> 
+          или введите необходимые числа в <i>текстовые поля</i>.<br>
+          Чтобы повернуть параллепипеда вокруг оси X, Y или Z, используйте
+          соответствующие <i>ползунки</i> или <i>текстовые поле</i>.</div>
+      <div id="content" class="text3D">
+        <div id="input">
+            <div id="div_sizes">
+              <h3>Размеры<br>параллепипеда</h3>
+              <span>X:</span>
+              <input type="range"  id="rsetX" min="0" max="200" step="1" value="100">
+              <input type="text" id="tsetX" value="100" size="1">
+              <span>Y:</span>
+              <input type="range"  id="rsetY" min="0" max="200" step="1" value="100">
+              <input type="text" id="tsetY" value="100" size="1">
+              <span>Z:</span>
+              <input type="range"  id="rsetZ" min="0" max="200" step="1" value="100">
+              <input type="text" id="tsetZ" value="100" size="1">
+            </div>
+            <div id="div_rotation">
+              <h3>Повороты</h3>
+              <span>Вокруг X. Угол °:</span>
+              <input type="range" id="rsetRotate_X" min="0" max="360" step="1" value="0">
+              <input type="text" id="tsetRotate_X" value="0" size="1">
+              <span>Вокруг Y. Угол °:</span>
+              <input type="range" id="rsetRotate_Y" min="0" max="360" step="1" value="0">
+              <input type="text" id="tsetRotate_Y" value="0" size="1">
+              <span>Вокруг Z. Угол °:</span>
+              <input type="range" id="rsetRotate_Z" min="0" max="360" step="1" value="0">
+              <input type="text" id="tsetRotate_Z" value="0" size="1">
+            </div>
+          </div>
+          <div id="output">
+            <canvas id="canvas" width="310" height="310"></canvas>
+         </div> 
+      </div>
+    </main>
+
+    <footer>
+      <p>by FedoZ<br>
+        <img src="img/email.png"></p>
+    </footer>
+
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/lighting.js"></script>
+  </body>
+</html>

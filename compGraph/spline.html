@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/inputs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Graphic</title>
+  </head>
+  <body>
+
+    <header>
+      <div id="top_header">
+        <span id="burger">&#9776;</span>
+        <p id="headline">Компьютерная графика</p>
+      </div>
+      <div id="bottom_header">
+          <div id="menu" class="close">
+            <a href="index.html"><img src="img/home.png" height="20px" 
+                                        hspace="2px" alt="Главная страница"></a>
+            <a href="projections.html">Проекции</a>
+            <a class="active" href="#">Сплайн</a>
+            <a href="surface.html">Поверхность</a>
+            <a href="clipping.html">Отсечение</a>
+            <a href="lighting.html">Освещение</a>
+          </div>
+      </div>
+    </header>
+
+    <main>
+      <span id="topic_name"> Параболлический сплайн</span>
+      <span id="help" class="text3D">?</span>
+      <div id="topic_help" class="close">На странице представлена реализация 
+          <b>параболлического сплайна</b>, построенного по ломанной линии, 
+          заданной узловыми точками.<br>
+          Для создания новой узловой точки нажмите <i>кнопку 
+          "Добавить точку"</i>.<br>
+          Чтобы задать координаты точек, используйте <i>текстовые поля</i>.<br>
+          Нажмите на <i>кнопку "Построить сплайн"</i> для получение результата.
+      </div>
+      <div id="content" class="text3D">
+          <div id="input">
+            <div id="div_points">
+              <p class="point">
+                X:<input type="text" size="1" value="-100">
+                Y:<input type="text" size="1" value="150">
+                <input class="deletePoint red" type="button" value="Удалить"></p>
+              <p class="point">
+                X:<input type="text" size="1" value="-50">
+                Y:<input type="text" size="1" value="50">
+                <input class="deletePoint red" type="button" value="Удалить"></p>
+              <p class="point">
+                X:<input type="text" size="1" value="0">
+                Y:<input type="text" size="1" value="150">
+                <input class="deletePoint red" type="button" value="Удалить"></p>
+              <p class="point">
+                X:<input type="text" size="1" value="50">
+                Y:<input type="text" size="1" value="50">
+                <input class="deletePoint red" type="button" value="Удалить"></p>
+              <p class="point">
+                X:<input type="text" size="1" value="100">
+                Y:<input type="text" size="1" value="150">
+                <input class="deletePoint red" type="button" value="Удалить"></p>
+            </div>
+            <div id="div_buttons">
+              <input id="addPoint" class="green" type="button" value="Добавить точку">
+              <input id="drawing" class="blue" type="button" value="Построить сплайн">
+            </div>
+          </div>
+          <div id="output">
+            <canvas id="canvas" width="310" height="600" style="display:none"></canvas>
+          </div>          
+      </div>
+    </main>
+
+    <footer>
+      <p>by FedoZ<br>
+        <img src="img/email.png"></p>
+    </footer>
+
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/spline.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+input[type=text]{
+  border-radius:8px;
+  text-align:center;
+}
+input[type=text]:focus{
+  outline:none;
+  -webkit-box-shadow:0 0 4px 0 blue;
+  -moz-box-shadow:0 0 4px 0 blue;
+  box-shadow:0 0 4px 0 blue;
+}
+
+
+input[type=button]{
+  border-radius: 10px;
+  border: none;
+  padding: 2px 5px 5px 5px;
+  color: #111;
+  font-size: 1em;
+  font-weight: 200;
+  transition: all 0.2s;
+  -webkit-transition:all 0.2s;
+  -o-transition:left all 0.2s;
+  -moz-transition:left all 0.2s;
+  margin: 5px;
+  cursor:pointer;
+}
+input[type=button]:active{
+  transform: scaleX(0.9) translateY(4px);
+  -webkit-transition:left scaleX(0.9) translateY(4px);
+  -o-transition:left scaleX(0.9) translateY(4px);
+  -moz-transition:left scaleX(0.9) translateY(4px);
+}
+input[type=button]:not(:active){
+  -webkit-box-shadow:0 -4px 0 rgba(0, 0, 0, 0.18) inset;
+  -moz-box-shadow:0 -4px 0 rgba(0, 0, 0, 0.18) inset;
+  box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.18) inset;
+}
+input[type=button]:focus{
+  outline:none;
+}
+input[type=button].green{
+  background: #82CA9D;
+}
+input[type=button].red{
+  background: #F7977A;
+}
+input[type=button].blue{
+  background: #7EA7D8;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/inputs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Graphic</title>
+  </head>
+  <body>
+
+    <header>
+      <div id="top_header">
+        <span id="burger">&#9776;</span>
+        <p id="headline">Компьютерная графика</p>
+      </div>
+      <div id="bottom_header">
+        <div id="menu" class="close">
+          <a href="index.html"><img src="img/home.png" height="20px" hspace="2px" alt="Главная страница"></a>
+          <a href="projections.html">Проекции</a>
+          <a href="spline.html">Сплайн</a>
+          <a href="surface.html">Поверхность</a>
+          <a class="active" href="#">Отсечение</a>
+          <a href="lighting.html">Освещение</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <span id="topic_name">Отсечение отрезков</span>
+      <span id="help" class="text3D">?</span>
+      <div id="topic_help" class="close">На странице представлена реализация 
+          <b>отсечения отрезков</b> прямоугольным окном произвольного размера 
+          с помощью алгоритма Сазерленда-Коэна.<br>
+          Для начала необходимо нажать на <i>кнопку "Сгенерировать отрезки"</i>. 
+          Будут отрисованы от 1 до 20 случаных отрезков.<br>
+          Затем, чтобы задать его размеры и расположение окна, используйте 
+          <i>ползунки</i> или введите необходимые
+          значения в <i>текстовые поля</i>.<br>
+          Все части отрезков, попавшие в окно, будут перекрашены.</div>
+      <div id="content" class="text3D">
+        <div id="input">
+            <div id="set_window">
+              <h3>Размеры окна</h3>
+              <span>Ширина:</span>
+              <input type="range" id="rset_width"  min="1" max="600" step="1" value="100">
+              <input type="text" id="tset_width" value="100" size="1">
+              <span>Высота:</span>
+              <input type="range" id="rset_height" min="1" max="600" step="1" value="100">
+              <input type="text" id="tset_height" value="100" size="1">
+            </div>
+            <div id="move_window">
+              <h3>Перемещение окна</h3>
+              <span>Горизонтально:</span>
+              <input type="range" id="rmove_Horiz"  min="0" max="600" step="1" value="100">
+              <input type="text" id="tmove_Horiz" value="100" size="1">
+              <span>Вертикально:</span>
+              <input type="range" id="rmove_Vert"  min="0" max="600" step="1" value="100">
+              <input type="text" id="tmove_Vert" value="100" size="1">
+            </div>
+            <input id="generateButton" class="blue" type="button" value="Сгенерировать отрезки">
+          </div>
+          <div id="output">
+            <canvas id="canvas" width="310" height="310"  style="display:none"></canvas>
+        </div>  
+      </div>
+    </main>
+
+    <footer>
+      <p>by FedoZ<br>
+        <img src="img/email.png"></p>
+    </footer>
+
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/clipping.js"></script>
+  </body>
+</html>

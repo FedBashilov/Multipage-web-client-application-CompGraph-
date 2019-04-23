@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/inputs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Graphic</title>
+  </head>
+  <body>
+    <header>
+      <div id="top_header">
+        <span id="burger">&#9776;</span>
+        <p id="headline">Компьютерная графика</p>
+      </div>
+      <div id="bottom_header">
+          <div id="menu" class="close">
+            <a href="index.html"><img src="img/home.png" height="20px" hspace="2px" alt="Главная страница"></a>
+            <a class="active" href="#">Проекции</a>
+            <a href="spline.html">Сплайн</a>
+            <a href="surface.html">Поверхность</a>
+            <a href="clipping.html">Отсечение</a>
+            <a href="lighting.html">Освещение</a>
+          </div>
+      </div>
+    </header>
+    
+    <main>
+      <span id="topic_name">Проекции параллепипеда</span>
+      <span id="help" class="text3D">?</span>
+      <div id="topic_help" class="close">На странице представлена реализация 
+          <b>изометрической</b> и <b>диметрической</b> проекций объемного 
+          геометрического тела, а именно произвольно заданного <b>параллепипеда</b>.<br>
+          Чтобы задать его размеры, используйте <i>ползунки</i> или введите 
+          необходимые числа в <i>текстовые поля</i>.</div>
+      <div id="content" class="text3D">
+          <div id="input">
+            <div id="sizes">
+              <h3>Размеры параллепипеда</h3>
+              <p>X:
+                <input type="range"  id="rsetX" min="0" max="150" step="1" value="75">
+                <input type="text" id="tsetX" value="75" size="1"></p>
+              <p>Y:
+                <input type="range"  id="rsetY" min="0" max="150" step="1" value="75">
+                <input type="text" id="tsetY" value="75" size="1"></p>
+              <p>Z:
+                <input type="range"  id="rsetZ" min="0" max="150" step="1" value="75">
+                <input type="text" id="tsetZ" value="75" size="1"></p>
+            </div>
+          </div>
+          <div id="output">
+              <div id="isom_canvas">
+                <h3>Изометрия</h3>
+                <canvas id="isom" width="310" height="310"></canvas>
+              </div>
+              <div id="dim_canvas">
+                <h3>Диметрия</h3>
+                <canvas id="dim" width="310" height="310"></canvas>
+              </div>
+          </div>          
+      </div>
+    </main>
+    
+    <footer>
+      <p>by FedoZ<br>
+        <img src="img/email.png"></p>
+    </footer>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/projections.js"></script>
+  </body>
+</html>

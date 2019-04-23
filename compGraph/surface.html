@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/inputs.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Graphic</title>
+  </head>
+  <body>
+
+    <header>
+      <div id="top_header">
+        <span id="burger">&#9776;</span>
+        <p id="headline">Компьютерная графика</p>
+      </div>
+      <div id="bottom_header">
+          <div id="menu" class="close">
+            <a  href="index.html"><img src="img/home.png" height="20px" hspace="2px" alt="Главная страница"></a>
+            <a href="projections.html">Проекции</a>
+            <a href="spline.html">Сплайн</a>
+            <a class="active" href="#">Поверхность</a>
+            <a href="clipping.html">Отсечение</a>
+            <a href="lighting.html">Освещение</a>
+          </div>
+      </div>
+    </header>
+
+    <main>
+      <span id="topic_name">Билинейная поверхность</span>
+      <span id="help" class="text3D">?</span>
+      <div id="topic_help" class="close">На странице представлена реализация 
+          построения <b>билинейной поверхности</b> по четырем угловым точкам 
+          произвольной рамки.<br>
+          Чтобы задать координаты точек, используйте соответствующие 
+          <i>текстовые поля</i>.<br>
+          По четырем заданным точкам достраивается трехмерная поверхность.<br>
+          Чтобы повернуть поверхность вокруг оси Z, используйте <i>ползунок</i> 
+          или соответствующее <i>текстовое поле</i>.
+      </div>
+      <div id="content" class="text3D">
+        <div id="input">
+          <div id="panel">
+            <div id="points">
+              <h3>Угловые точки</h3>
+              <p class="point">
+                X:<input type="text" size="1" value="0">
+                Y:<input type="text" size="1" value="0">
+                Z:<input type="text" size="1" value="110"></p>
+              <p class="point">
+                X:<input type="text" size="1" value="0">
+                Y:<input type="text" size="1" value="100">
+                Z:<input type="text" size="1" value="80"></p>
+              <p class="point">
+                X:<input type="text" size="1" value="100">
+                Y:<input type="text" size="1" value="100">
+                Z:<input type="text" size="1" value="20"></p>
+              <p class="point">
+                X:<input type="text" size="1" value="100">
+                Y:<input type="text" size="1" value="0">
+                Z:<input type="text" size="1" value="150"></p>
+            </div>
+            <div id="div_rotation">
+              <h3>Поворот вокруг Z</h3>
+              <span>Угол °:</span>
+              <input type="range" class="rotate" id="range_Rotate" min="0" 
+                                                  max="360" step="1" value="0">
+              <input type="text" class="rotate" id="text_Rotate" value="0" size="1">
+            </div>
+          </div>
+          <div id="XY">
+            <h3>XY</h3>
+            <canvas id="XY_canvas" width="310" height="310"></canvas>
+          </div>
+        </div>
+        <div id="output">
+          <div id="XYZ">
+            <h3>XYZ</h3>
+            <canvas id="XYZ_canvas" width="310" height="310"></canvas>
+        </div>          
+      </div>
+    </main>
+
+    <footer>
+      <p>by FedoZ<br>
+        <img src="img/email.png"></p>
+    </footer>
+
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/surface.js"></script>
+  </body>
+</html>
